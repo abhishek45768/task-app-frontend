@@ -1,0 +1,14 @@
+.notes-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1rem;
+    padding: 2rem;
+  }
+  
+  .no-notes {
+    font-size: 1.2rem;
+    color: #666;
+    text-align: center;
+    margin-top: 2rem;
+  }
+  
