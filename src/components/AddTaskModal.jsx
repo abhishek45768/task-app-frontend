@@ -1,16 +1,16 @@
 import React, { useState, useEffect } from 'react';
-import './AddNoteModal.css';
+import './AddTaskModal.css';
 
-function AddNoteModal({ onClose, onSave, note }) {
+function AddtaskModal({ onClose, onSave, task }) {
   const [title, setTitle] = useState('');
   const [content, setContent] = useState('');
 
   useEffect(() => {
-    if (note) {
-      setTitle(note.title);
-      setContent(note.content);
+    if (task) {
+      setTitle(task.title);
+      setContent(task.content);
     }
-  }, [note]);
+  }, [task]);
 
   const handleSave = () => {
     if (title.trim() && content.trim()) {
@@ -22,15 +22,15 @@ function AddNoteModal({ onClose, onSave, note }) {
   return (
     <div className="modal">
       <div className="modal-content">
-        <h2>{note ? 'Edit Note' : 'Add Note'}</h2>
+        <h2>{task ? 'Edit Task' : 'Add Task'}</h2>
         <input
           type="text"
-          placeholder="Enter note title"
+          placeholder="Enter Task title"
           value={title}
           onChange={(e) => setTitle(e.target.value)}
         />
         <textarea
-          placeholder="Enter note content"
+          placeholder="Enter Task content"
           value={content}
           onChange={(e) => setContent(e.target.value)}
         />
@@ -47,4 +47,4 @@ function AddNoteModal({ onClose, onSave, note }) {
   );
 }
 
-export default AddNoteModal;
+export default AddtaskModal;
