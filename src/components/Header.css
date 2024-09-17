@@ -14,7 +14,7 @@
     color: #333;
   }
   
-  .add-note-btn {
+  .add-task-btn {
     background-color: #007bff;
     color: white;
     padding: 0.5rem 1rem;
@@ -25,7 +25,7 @@
     transition: background-color 0.3s ease;
   }
   
-  .add-note-btn:hover {
+  .add-task-btn:hover {
     background-color: #0056b3;
   }
   
